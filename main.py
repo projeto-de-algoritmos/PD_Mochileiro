@@ -1,6 +1,4 @@
 def knapsack(wt, val, W, n):
-    print("W(", W, ")")
-    print("n(", n, ")")
 
     if n == 0 or W == 0:
         return 0
@@ -27,16 +25,16 @@ n = int(input("Digite o número de itens que podem ser escolhidos:"))
 print("Adicione os itens, seus respectivos pesos e o valor de importância de cada um:")
 
 z = 0
-while(z < int(n)):
+while(z < n):
     print("Item ", z+1, ":")
     aux = int(input())
     itns.append(aux)
-    print("Peso do item ", z+1, ":")
-    aux = int(input())
-    wt.append(aux)
     print("Valor de importância do item ", z+1, ":")
     aux = int(input())
     val.append(aux)
+    print("Peso do item ", z+1, ":")
+    aux = int(input())
+    wt.append(aux)
 
     z = z+1
 
