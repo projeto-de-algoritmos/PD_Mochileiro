@@ -1,5 +1,3 @@
-
-
 def knapsack(weightArray, valueArray, limitWeight, sizeArray, auxMatrix):
     recursiveMatrix = auxMatrix
 
@@ -7,23 +5,23 @@ def knapsack(weightArray, valueArray, limitWeight, sizeArray, auxMatrix):
         return 0
     if recursiveMatrix[sizeArray][limitWeight] != -1:
         return recursiveMatrix[sizeArray][limitWeight]
- 
+
     if weightArray[sizeArray - 1] <= limitWeight:
-        recursiveMatrix[sizeArray][limitWeight] = max(valueArray[sizeArray-1] + 
+        recursiveMatrix[sizeArray][limitWeight] = max(valueArray[sizeArray-1] +
             knapsack(
-                weightArray, 
-                valueArray, 
+                weightArray,
+                valueArray,
                 limitWeight - weightArray[sizeArray-1],
                 sizeArray-1,
                 recursiveMatrix),
             knapsack(
-                weightArray, 
-                valueArray, 
-                limitWeight, 
+                weightArray,
+                valueArray,
+                limitWeight,
                 sizeArray - 1,
                 recursiveMatrix))
         return recursiveMatrix[sizeArray][limitWeight]
-    
+
     elif weightArray[sizeArray-1] > limitWeight:
         recursiveMatrix[sizeArray][limitWeight] = knapsack(weightArray, valueArray, limitWeight, sizeArray - 1, recursiveMatrix)
         return recursiveMatrix[sizeArray][limitWeight]
