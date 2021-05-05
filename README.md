@@ -40,3 +40,4 @@ Então o jogo irá iniciar.
 
 
 ## Vídeo
+[<img src="https://img.youtube.com/vi/sN-yK2ggl2M/sddefault.jpg">](https://youtu.be/sN-yK2ggl2M)
